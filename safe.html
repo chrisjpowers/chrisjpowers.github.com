@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Safe</title>
+  <style>
+    body {
+      background: url(/images/safe/metal-bg.jpg) repeat;
+      text-align: center;
+    }
+
+    button {
+      padding: 15px;
+      margin: 10px;
+      font: 36px bold;
+      box-shadow: inset 0px 0px 20px rgba(0,0,0,0.7);
+      border: 5px solid #555;
+      border-radius: 25px;
+      outline: none;
+      cursor: pointer; cursor: hand;
+    }
+
+      button:disabled {
+        background: #555;
+        cursor: default;
+      }
+
+    .currents {
+      margin-bottom: 40px;
+    }
+
+    .number {
+      display: inline-block;
+      font-size: 72px;
+      font-weight: bold;
+      border-radius: 25px;
+      padding: 25px;
+      margin: 20px;
+      width: 72px;
+      text-align: center;
+      color: #ddd;
+      box-shadow: inset 0px 0px 20px rgba(0,0,0,0.7);
+      border: 8px solid #555;
+    }
+
+    .target-y, .current-y {
+      background: #993;
+    }
+
+    .target-b, .current-b {
+      background: #339;
+    }
+
+    .target-g, .current-g {
+      background: #393;
+    }
+
+    #success {
+      background: white;
+      font-size: 36px;
+      padding: 30px;
+      margin: 100px;
+    }
+  </style>
+  <script src="/assets/js/jquery.js"></script>
+  <script>
+    (function($) {
+      function updateColor(key, num) {
+        var el = $(".step:visible .current-" + key),
+            current = parseInt(el.text(), 10),
+            total = current + num,
+            totalWithFloor = total < 0 ? 0 : total;
+        el.text("" + totalWithFloor);
+      }
+
+      function checkForSuccess() {
+        var step = $(".step:visible");
+        if (step.find(".target-y").text() == step.find(".current-y").text() &&
+            step.find(".target-b").text() == step.find(".current-b").text() &&
+            step.find(".target-g").text() == step.find(".current-g").text()) {
+          console.log("holla");
+          step.find(".open-door").attr("disabled", null);
+          step.find("button:not(.open-door)").attr("disabled", "disabled");
+        }
+      }
+
+      function onButtonClick(e) {
+        var $this = $(this),
+            deltaY = parseInt($this.data("y"), 10),
+            deltaB = parseInt($this.data("b"), 10),
+            deltaG = parseInt($this.data("g"), 10);
+        updateColor("y", deltaY);
+        updateColor("b", deltaB);
+        updateColor("g", deltaG);
+        checkForSuccess();
+      }
+
+      function onInvertClick() {
+        var step = $(".step:visible"),
+            buttons = step.find("button:not('.invert')"),
+            invertString = function(s) {
+              if (!s) return;
+              console.log(s);
+              return ("" + s).replace(/^(\d)/, "+$1").replace(/\+/g, "~").replace(/\-/g, "+").replace(/~/g, "-");
+            };
+        buttons.each(function() {
+          var valY, valB, valG, button = $(this);
+          button.text(invertString(button.text()));
+          if (valY = button.data("y")) { 
+            button.data("y", invertString(valY));
+          }
+          if (valB = button.data("b")) { 
+            button.data("b", invertString(valB));
+          }
+          if (valG = button.data("g")) { 
+            button.data("g", invertString(valG));
+          }
+        });
+      }
+
+      function reset() {
+        var step = $(".step:visible"),
+            y = step.find(".current-y"),
+            b = step.find(".current-b"),
+            g = step.find(".current-g");
+        y.text("" + y.data("orig"));
+        b.text("" + b.data("orig"));
+        g.text("" + g.data("orig"));
+      }
+
+      function onOpenDoor() {
+        var currentStep = $(".step:visible"),
+            nextStep = currentStep.next(".step");
+        currentStep.hide();
+        nextStep.show();
+        reset();
+      }
+
+      function init() {
+        $(".buttons button:not('.invert')").on("click", onButtonClick);
+        $(".buttons .invert").on("click", onInvertClick);
+        $(".reset").on("click", reset);
+        $(".open-door").on("click", onOpenDoor);
+        reset();
+      }
+
+      $(init);
+    })(jQuery);
+  </script>
+</head>
+<body>
+  <div class="step" id="step1">
+    <div class="targets">
+      <span class="number target-y">5</span>
+      <span class="number target-b">4</span>
+      <span class="number target-g">1</span>
+    </div>
+    <div class="currents">
+      <span class="number current-y" data-orig="2"></span>
+      <span class="number current-b" data-orig="2"></span>
+      <span class="number current-g" data-orig="2"></span>
+    </div>
+    <div class="buttons">
+      <button data-y="2" data-b="2" data-g="0">+2Y +2B</button>
+      <button data-y="1" data-b="1" data-g="-1">+1Y +1B -1G</button>
+      <button data-y="-1" data-b="-2" data-g="1">-1Y -2B +1G</button>
+    </div>
+    <div class="controls">
+      <button class="reset">Reset Lock</button>
+      <button class="open-door" disabled>Open Door</button>
+    </div>
+  </div>
+
+  <div class="step" id="step2" style="display: none;">
+    <div class="targets">
+      <span class="number target-y">2</span>
+      <span class="number target-b">7</span>
+      <span class="number target-g">4</span>
+    </div>
+    <div class="currents">
+      <span class="number current-y" data-orig="0"></span>
+      <span class="number current-b" data-orig="0"></span>
+      <span class="number current-g" data-orig="0"></span>
+    </div>
+    <div class="buttons">
+      <button data-y="1" data-b="2" data-g="3">+1Y +2B +3G</button>
+      <button data-y="1" data-b="1" data-g="1">+1Y +1B +1G</button>
+      <button data-y="-2" data-b="1" data-g="-2">-2Y +1B -2G</button>
+    </div>
+    <div class="controls">
+      <button class="reset">Reset Lock</button>
+      <button class="open-door" disabled>Open Door</button>
+    </div>
+  </div>
+
+  <div class="step" id="step3" style="display: none;">
+    <div class="targets">
+      <span class="number target-y">2</span>
+      <span class="number target-b">2</span>
+      <span class="number target-g">4</span>
+    </div>
+    <div class="currents">
+      <span class="number current-y" data-orig="0"></span>
+      <span class="number current-b" data-orig="0"></span>
+      <span class="number current-g" data-orig="0"></span>
+    </div>
+    <div class="buttons">
+      <button data-y="3" data-b="0" data-g="-1">+3Y -1G</button>
+      <button data-y="1" data-b="-1" data-g="0">+1Y -1B</button>
+      <button data-y="4" data-b="2" data-g="2">+4Y +2B +2G</button>
+      <button data-y="0" data-b="-2" data-g="1">-2B +1G</button>
+      <button class="invert">Invert</button>
+    </div>
+    <div class="controls">
+      <button class="reset">Reset Lock</button>
+      <button class="open-door" disabled>Open Door</button>
+    </div>
+  </div>
+
+  <div class="step" id="success" style="display: none;">
+    <p><em>
+      As you finish punching in the last successful combination of buttons,
+      the final door slowly creaks open, revealing the hidden contents inside...
+    </em></p>
+    <p><strong>Open this box now and claim its contents!</strong></p>
+  </div>
+</body>
+</html>

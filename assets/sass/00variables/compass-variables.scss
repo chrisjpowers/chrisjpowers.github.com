@@ -1,0 +1,55 @@
+$default-background-clip: padding-box;
+$default-background-origin: content-box;
+$default-background-size: 100% auto;
+
+$default-border-radius: .25em;
+
+$default-box-orient: horizontal;
+$default-box-align: stretch;
+$default-box-flex: 0;
+$default-box-flex-group: 1;
+$default-box-ordinal-group: 1;
+$default-box-direction: normal;
+$default-box-lines: single;
+$default-box-pack: start;
+
+$default-box-shadow-color: transparentize(#000, .5);
+$default-box-shadow-h-offset: 0px;
+$default-box-shadow-v-offset: 0px;
+$default-box-shadow-blur: 5px;
+$default-box-shadow-spread: false;
+$default-box-shadow-inset: false;
+
+$default-text-shadow-color: #aaa;
+$default-text-shadow-h-offset: 0px;
+$default-text-shadow-v-offset: 0px;
+$default-text-shadow-blur: 1px;
+
+/* 3d Transform Defaults */
+$default-origin-x: 50%;
+$default-origin-y: 50%;
+$default-origin-z: 50%;
+$default-scale-x: 1.25;
+$default-scale-y: $default-scale-x;
+$default-scale-z: $default-scale-x;
+$default-rotate: 45deg;
+$default-vector-x: 1;
+$default-vector-y: 1;
+$default-vector-z: 1;
+$default-translate-x: 1em;
+$default-translate-y: $default-translate-x;
+$default-translate-z: $default-translate-x;
+$default-skew-x: 5deg;
+$default-skew-y: 5deg;
+
+/* Transition Defaults */
+$default-transition-property: all;
+$default-transition-duration: .2s;
+$default-transition-function: false;
+$default-transition-delay: false;
+$transitionable-prefixed-values: transform, transform-origin;
+
+/* Color Contrast Defaults */
+$contrasted-dark-default: black;
+$contrasted-light-default: white;
+$contrasted-lightness-threshold: 30%;

@@ -1,0 +1,170 @@
+/**************************************************
+ MAIN / INTERIOR PAGE STYLES
+**************************************************/
+
+.main {
+  @extend %clearfix;
+  margin-top: $small-fixed-top;
+  background-color: $main-bg;
+  .content {
+    @extend %major-column;
+    &.blog {margin-bottom:6em}
+    article {
+      @include border-radius(3px);
+      overflow: hidden;
+      margin-bottom: 3em;
+      background-color: $module-bg;
+      border: 1px solid $main-module-border;
+    }
+    &.blog,
+    &.entry {
+      article {
+        padding: 2em;
+        header {
+          margin-bottom: 1.5em;
+          padding-bottom: 1.5em;
+          border-bottom: 1px solid $border-color;
+          .entry-date{
+            margin:0 0 .5em;
+            color:$entry-date-text;
+          }
+          h1,h2{margin:0}
+        }
+        .video-box {margin-bottom:2em}
+        footer {
+          margin-top: 6em;
+          padding-top: 3em;
+          border-top: 1px solid $border-color;
+          .back {
+            @extend %left-arrow;
+            @include font-size(16);
+            margin: 0;
+            padding-left: 1.75em;
+            font-family: $roboto;
+            font-weight: 300;
+          }
+        }
+        .more {
+          @extend %arrow;
+          @include font-size(16);
+          display: block;
+          float: right;
+          margin: .5em 0;
+          padding-right: 1.5em;
+          font-family: $roboto;
+          font-weight: 300;
+        }
+      }
+    }
+    &.talks {
+      article {
+        padding: .5em;
+        h2 {
+          margin: 0;
+          a {
+            @extend %arrow;
+            display: block;
+            padding: .5em 1.5em .5em .75em;
+            color: $module-heading-text;
+            &:after {margin-top:.625em}
+            &:hover,&:focus {color:$module-heading-hover-text}
+          }
+        }
+      }
+    }
+  }
+  @include break-up($small){
+    .content.blog,
+    .content.entry {
+      article {
+        padding: 2.5em 3em 3em;
+        header {
+          margin-bottom: 2.5em;
+          padding-bottom: 2.5em;
+        }
+        .more {margin: 1em 0 0}
+      }
+    }
+  }
+  @include break-up($small){
+    margin-top: $fixed-top;
+  }
+  @include break-up($medium){
+    .content.blog {margin-bottom: 3em}
+  }
+}
+
+/**************************************************
+ SIDEBAR STYLES
+**************************************************/
+
+aside {
+  .main & {
+    @extend %minor-column;
+    max-width: 42em;
+    margin: 0 auto;
+    h2 {
+      margin: .75em 0 1em;
+      padding-bottom: 1em;
+      border-bottom: 1px solid $border-color;
+      color: $sidebar-headline-color;
+      text-align: center;
+      text-transform: uppercase;
+    }
+    .text {
+      @include border-radius(3px);
+      margin-bottom: 1em;
+      padding: 1.5em;
+      background-color: $module-bg;
+      border: 1px solid $main-module-border;
+      p {@include font-size(12)}
+    }
+    .button {@extend %red-button}
+    @include break-up($small){
+      .text {padding: 1.5em 3em}
+    }
+    @include break-up($medium){
+      max-width: none;
+      .text {padding: 1.5em}
+    }
+    @include break-up($large){
+      .text {padding: 1.5em 3em}
+    }
+    @include break-up($x-large){padding: 0 5%}
+  }
+}
+
+/**************************************************
+ PAGINATION STYLES
+**************************************************/
+
+.pagination {
+  @extend %clearfix;
+  @include border-radius(.5em);
+  margin-top: 4.5em;
+  background-color: $mobile-pagination-bg;
+  .prev,.next {
+    @extend %button;
+    @include font-size(18);
+    width: 50%;
+  }
+  .prev {
+    @include border-right-radius(0);
+    float: left;
+  }
+  .next {
+    @include border-left-radius(0);
+    float: right;
+  }
+  @include break-up($medium){
+    margin: 4.5em 0 0;
+    background-color: transparent;
+    .prev,.next {
+      @include border-radius(.25em);
+      width: 30%;
+    }
+  }
+  @include break-up($large){
+    .prev,.next {@include font-size(21)}
+  }
+}

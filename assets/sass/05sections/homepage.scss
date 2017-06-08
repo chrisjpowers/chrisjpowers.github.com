@@ -1,0 +1,343 @@
+/**************************************************
+ TALKS TOP SECTION STYLES
+**************************************************/
+
+section.talks-top {
+  margin-top: $small-fixed-top;
+  overflow: hidden;
+  padding: 0;
+  background-color: $talks-top-bg;
+  aside {
+    padding: 4.5em $side-padding;
+    h2 {
+      margin: 0 0 1em;
+      color: $talks-aside-headline;
+      text-align: center;
+      text-transform: uppercase;
+    }
+    .button {
+      @extend %red-button;
+      max-width: 15em;
+      margin: 1.25em auto;
+    }
+  }
+  .video-box {
+    position: relative;
+    background-color: $module-bg;
+    border: 1px solid darken($talks-top-bg, 15%);
+    border-top-width: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    h6 {
+      @include font-size(14);
+      margin: 0;
+      padding: .875em $side-padding;
+      background-color: $talks-featured-cap-bg;
+      color: $talks-featured-cap-text;
+      text-transform: uppercase;
+    }
+    h4 {
+      margin: 0;
+      a {
+        @extend %arrow;
+        display: block;
+        padding: .875em 2em .875em $side-padding;
+        color: $module-heading-text;
+        &:hover,&:focus {
+          color: $module-heading-hover-text;
+        }
+      }
+    }
+  }
+  @include break-up($small){
+    margin-top: $fixed-top;
+  }
+  @include break-up($medium){
+    padding: 3em $side-padding;
+    .video-box {
+      @include border-radius(3px);
+      padding: 4.625em .5em 0;
+      border-top-width: 1px;
+      border-left-width: 1px;
+      border-right-width: 1px;
+      h6 {
+        @include border-top-radius(3px);
+        position: absolute;
+        top: -1px;
+        left: -1px;
+        right: -1px;
+        padding: 1em 1.375em;
+      }
+      h4 a {padding-left: .75em}
+    }
+  }
+  @include break-up($large){
+    padding-top: 4.5em;
+    .video-box {
+      float: left;
+      width: 48.875%;
+    }
+    aside {
+      float: right;
+      padding: 1.5em 5%;
+      width: 48.875%;
+      p {@include font-size(14)}
+    }
+  }
+  @include break-up($x-large){
+    .video-box {width:59.25%}
+    aside {
+      width: 38.875%;
+      padding-top: 5%;
+    }
+  }
+}
+
+/**************************************************
+ TALKS LIST SECTION STYLES
+**************************************************/
+
+section.talks-list {
+  @extend %clearfix;
+  background-color: $talks-list-bg;
+  padding-top: 3em;
+  padding-bottom: 3em;
+  .heading {
+    margin: 0 0 1.25em;
+    color: $teal;
+  }
+  ul {
+    list-style: none;
+    width: 105%;
+    margin: 0 0 0 -5%;
+    @include break-up($x-large){
+      width: 102%;
+      margin-left: -2%;
+    }
+  }
+  li {
+    @include border-radius(3px);
+    overflow: hidden;
+    float: left;
+    width: 45%;
+    margin: 0 0 5% 5%;
+    border: 1px solid darken($talks-list-bg, 15%);
+    &:nth-child(2n+1){clear:left}
+    a {
+      display: block;
+      background-color: $module-heading-hover-text;
+      border: 5px solid $module-bg;
+      &:hover,
+      &:focus {
+        img {@include opacity(.5)}
+        h4 {color:$module-heading-hover-text}
+      }
+    }
+    img {
+      @extend %transition;
+      display: block;
+      width: 100%;
+    }
+    h4 {
+      margin: 0;
+      background-color: $module-bg;
+      padding: .25em .75em .125em;
+      color: $module-heading-text;
+    }
+  }
+  @include break-up($medium){
+    ul {
+      width: 103.33%;
+      margin-left: -3.33%;
+    }
+    li {
+      width: 30%;
+      margin-bottom: 3.33%;
+      margin-left: 3.33%;
+      &:nth-child(2n+1){clear:none}
+      &:nth-child(3n+1){clear:left}
+    }
+  }
+  @include break-up($large){
+    ul {
+      width: 102.5%;
+      margin-left: -2.5%;
+    }
+    li {
+      width: 22.5%;
+      margin-bottom: 2.5%;
+      margin-left: 2.5%;
+      &:nth-child(3n+1){clear:none}
+      &:nth-child(4n+1){clear:left}
+    }
+  }
+  @include break-up($x-large){
+    ul {
+      width: 102%;
+      margin-left: -2%;
+    }
+    li {
+      width: 18%;
+      margin-bottom: 2%;
+      margin-left: 2%;
+      &:nth-child(4n+1){clear:none}
+      &:nth-child(5n+1){clear:left}
+    }
+  }
+}
+
+/**************************************************
+ BLOG SECTION STYLES
+**************************************************/
+
+section.blog {
+  @extend %clearfix;
+  background-color: $home-blog-bg;
+  .inner {position:relative}
+  .heading {
+    margin: 0 0 1.5em;
+    color: $home-blog-heading;
+  }
+  article {
+    @include border-radius(3px);
+    overflow: hidden;
+    background-color: $module-bg;
+    margin-bottom: 3em;
+    padding: 2em;
+  }
+  header {
+    margin-bottom: 1.5em;
+    padding-bottom: 1.5em;
+    border-bottom: 1px solid $border-color;
+    h2 {margin:0}
+    .entry-date {
+      margin: 0 0 .5em;
+      color: $entry-date-text;
+    }
+  }
+  .more {
+    @extend %arrow;
+    @include font-size(16);
+    display: block;
+    float: right;
+    margin: .5em 0;
+    padding-right: 1.5em;
+    font-family: $roboto;
+  }
+  .button {border:none}
+  @include break-up($small){
+    article {
+      padding: 2.5em 3em 3em;
+      header {
+        margin-bottom: 2.5em;
+        padding-bottom: 2.5em;
+      }
+    }
+    .more {margin: 1em 0 0}
+  }
+  @include break-up($medium){
+    article {
+      float: left;
+      width: 48.875%;
+      margin-left: 2.25%;
+      margin-bottom: 0;
+      &.first {margin-left:0}
+    }
+    .button {
+      @include font-size(16);
+      position: absolute;
+      top: -.375em;
+      right: 0;
+    }
+  }
+}
+
+/**************************************************
+ OPEN SOURCE SECTION STYLES
+**************************************************/
+
+section.open-source {
+  @extend %clearfix;
+  background-color: $home-opensource-bg;
+  .heading {
+    margin: 0 0 1.5em;
+    color: $home-opensource-heading;
+  }
+  .projects {
+    list-style: none;
+    margin: 0 0 3em;
+    li {
+      @include font-size(10);
+      margin: 0 0 1.5em;
+    }
+    a {
+      @include border-radius(3px);
+      display: block;
+      overflow: hidden;
+      background-color: $home-project-bg;
+      h4 {color:$module-heading-text}
+      &:hover,&:focus {
+        background-color: $home-project-hover-bg;
+        h4 {color:$module-heading-hover-text}
+      }
+      p {color:$body-text}
+    }
+    h4 {
+      @extend %arrow;
+      margin: 0;
+      padding: .375em 2.25em .375em .75em;
+      background-color: $module-bg;
+      &:after {margin-top:.875em}
+    }
+    p {
+      @include font-size(12);
+      margin: 0;
+      padding: 1em;
+    }
+  }
+  aside {
+    max-width: 42em;
+    margin: 0 auto;
+    .text {
+      @include border-radius(3px);
+      overflow: hidden;
+      margin-bottom: 1em;
+      padding: 1em 1.5em;
+      background-color: $module-bg;
+      p {@include font-size(12)}
+    }
+    .button {@extend %dark-button}
+  }
+  @include break-up($small){
+    aside .text {padding: 1.5em 3em}
+  }
+  @include break-up($medium){
+    .projects {
+      float: left;
+      width: 48.875%;
+    }
+    aside {
+      float: right;
+      width: 48.875%;
+      max-width: none;
+      padding: 0 5%;
+    }
+  }
+  @include break-up($large){
+    .projects {width: 59.25%}
+    aside {width: 38.875%}
+  }
+  @include break-up($x-large){
+    .projects {
+      width: 61.25%;
+      margin-left: -2%;
+      margin-bottom: 0;
+      li {
+        float: left;
+        width: 30%;
+        margin: 0 0 3.33% 3.33%;
+        &:nth-child(3n+1){clear:left}
+      }
+    }
+  }
+}

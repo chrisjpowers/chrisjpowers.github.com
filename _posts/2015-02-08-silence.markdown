@@ -1,0 +1,20 @@
+---
+layout: post
+title: "Silence"
+date: 2014-12-02 20:18
+comments: false
+categories: talk
+vimeoId: 114703856
+---
+
+We are surrounded by noise -- it's time for silence. In this lightning talk, I explain how silence can:
+
+* improve your focus,
+* spark insightful and innovative ideas, and
+* help a group to quickly find concensus and make decisions.
+
+<!-- more -->
+
+## Presented At
+
+* [12/2/2014 Geekfest](http://www.meetup.com/Geekfest/events/209373312/)

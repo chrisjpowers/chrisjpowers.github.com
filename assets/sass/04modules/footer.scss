@@ -1,0 +1,141 @@
+/**************************************************
+ ABOUT SECTION STYLES
+**************************************************/
+
+.about-me {
+  @extend %clearfix;
+  background-color: $about-bg;
+  color: $about-text;
+  article {
+    @extend %clearfix;
+    margin-bottom: 3em;
+    a {
+      color: $about-link-color;
+      &:hover,&:focus {color:$about-link-hover-color}
+    }
+    h1 {
+      margin: 0 0 1em;
+      color: $about-text;
+      text-align: center;
+    }
+    h2 {color:$about-text}
+    .text p {margin: .5em 0}
+    figure {
+      @include border-radius(50%);
+      display: block;
+      overflow: hidden;
+      width: 20em;
+      margin: 0 auto 3em;
+      background-color: $about-photo-border;
+      border: 5px solid $about-photo-border;
+      -webkit-background-clip: padding-box;
+      -moz-background-clip: padding;
+      background-clip: padding-box;
+    }
+  }
+  aside {
+    max-width: 42em;
+    margin: 0 auto;
+    h3 {
+      color: $about-aside-headline;
+      text-align: center;
+    }
+    .text {
+      @include border-radius(3px);
+      overflow: hidden;
+      margin-bottom: 1em;
+      padding: 1em 1.5em;
+      background-color: $about-aside-bg;
+      color: $about-aside-text;
+      p {@include font-size(12)}
+    }
+    .button {@include button($about-aside-button-bg)}
+  }
+  @include break-up($small){
+    article {
+      h1 {
+        float: right;
+        width: 65.5%;
+        margin-bottom: .25em;
+        text-align: left;
+      }
+      figure {float:left;width:31.125%}
+      .text {float:right;width:65.5%}
+    }
+    aside .text{padding: 1em 3em 1.5em}
+  }
+  @include break-up($large){
+    article {
+      float: left;
+      width: 59.25%;
+      margin-bottom: 0;
+    }
+    aside {
+      float: right;
+      max-width: none;
+      margin-top: -1.5em;
+      padding: 0 $side-padding;
+      width: 38.875%;
+    }
+  }
+}
+
+/**************************************************
+ GLOBAL FOOTER STYLES
+**************************************************/
+
+%footer-bg {
+  background-color: $footer-bg;
+}
+
+.site-footer {
+  @extend %clearfix;
+  padding: 3em $side-padding;
+  color: $footer-text;
+  text-align: center;
+  .social-links {
+    margin-bottom: 3em;
+    padding-bottom: 1.5em;
+    border-bottom: 1px solid $footer-border;
+    h6 {
+      @include font-size(16);
+      margin: 0 0 1.5em;
+      color: $footer-text;
+      font-family: $footer-font;
+    }
+    ul {list-style:none;margin:0}
+    li {
+      @include inline-block;
+      @include font-size(10);
+      width: 3.6em;
+      margin: 0 .5em;
+    }
+    a {
+      color: $footer-icon-color;
+      &:hover,&:focus {color:$footer-icon-hover-color}
+    }
+    svg {fill:$footer-icon-bg}
+  }
+  .copyright {
+    @include font-size(12);
+    margin: 0;
+    font-family: $footer-font;
+  }
+  @include break-up($medium){
+    .social-links {
+      float: right;
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+      text-align: right;
+      h6 {@include inline-block;margin:-.25em .5em 0 0}
+      ul {@include inline-block}
+      li {margin-right:0;margin-left:1em}
+    }
+    .copyright {
+      @include font-size(16);
+      float: left;
+      margin-top: .375em;
+    }
+  }
+}

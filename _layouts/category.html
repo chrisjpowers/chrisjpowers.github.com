@@ -1,0 +1,52 @@
+---
+layout: default
+body_id: blog
+title: Talks | Chris Powers
+---
+
+<section class="main">
+  <div class="inner">
+    <div class="content blog">
+      {% for post in site.categories[page.category] %}
+      <article>
+        <header>
+          <p class="entry-date">{% include post/date.html %}{{ time }}</p>
+          <h2>
+            <a rel="full-article" href="{{ root_url }}{{ post.url }}">{{ post.title }}</a>
+          </h2>
+        </header>
+        {% if post.vimeoId %}
+        <div class="video-box">
+          <iframe src="//player.vimeo.com/video/{{ post.vimeoId }}?title=0&byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </div>
+        {% endif %}
+        {% if post.youtubeId %}
+        <div class="video-box">
+          <iframe width="500" height="281" src="https://www.youtube.com/embed/{{ post.youtubeId }}" frameborder="0" allowfullscreen></iframe>
+        </div>
+        {% endif %}
+        {{ post.excerpt }}
+        {% if post.excerpt != post.content %}
+          <a rel="full-article" href="{{ root_url }}{{ post.url }}" class="more">Read More</a>
+        {% endif %}
+      </article>
+      {% endfor %}
+
+      <footer class="pagination">
+        {% if paginator.next_page %}
+          <a class="prev" href="{{paginator.next_page}}">Previous</a>
+        {% endif %}
+        {% if paginator.previous_page %}
+          <a class="next" href="{{paginator.previous_page}}">Next</a>
+        {% endif %}
+      </footer>
+    </div>
+    <aside>
+      <div class="text">
+        <h2>Talks</h2>
+        <p>I'm passionate about seeing teams and individuals thrive in their organizations. My talks are tailored to encourage and to challenge, giving each person practical steps for moving forward. Please let me know how I can contribute to your conference or corporate event.</p>
+      </div>
+      <a href="mailto:chrisjpowers@gmail.com" class="button">Book Me</a>
+    </aside>
+  </div>
+</section>

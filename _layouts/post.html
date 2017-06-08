@@ -1,0 +1,50 @@
+---
+layout: default
+single: true
+body_id: blog
+---
+
+<section class="main">
+  <div class="inner">
+    <div class="content entry">
+      <article>
+        <header>
+          <p class="entry-date">
+            {% include post/date.html %}{{ time }}
+          </p>
+          <h1><a class="ja" href="{{ root_url }}{{ post.url }}">{{ page.title }}</a></h1>
+        </header>
+        {% if page.vimeoId %}
+        <div class="video-box">
+          <iframe src="//player.vimeo.com/video/{{ page.vimeoId }}?title=0&byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </div>
+        {% endif %}
+        {% if page.youtubeId %}
+        <div class="video-box">
+          <iframe width="500" height="281" src="https://www.youtube.com/embed/{{ page.youtubeId }}" frameborder="0" allowfullscreen></iframe>
+        </div>
+        {% endif %}
+        {% if page.speakerDeckId %}
+        <script async class="speakerdeck-embed" data-id="{{ page.speakerDeckId }}" data-ratio="{{ page.speakerDeckRatio }}" src="//speakerdeck.com/assets/embed.js"></script>
+        {% endif %}
+        {{ content }}
+        <footer>
+        <p class="back">
+        {% if page.categories.first == "article" %}
+          <a href="/blog/categories/article">Back to Blog</a>
+        {% else %}
+          <a href="/blog/categories/talk">Back to Talks</a>
+        </p>
+        {% endif %}
+        </footer>
+      </article>
+    </div>
+    <aside>
+      <div class="text">
+        <h2>Talks</h2>
+        <p>I'm passionate about seeing teams and individuals thrive in their organizations. My talks are tailored to encourage and to challenge, giving each person practical steps for moving forward. Please let me know how I can contribute to your conference or corporate event.</p>
+      </div>
+      <a href="mailto:chrisjpowers@gmail.com" class="button">Book Me</a>
+    </aside>
+  </div>
+</section>

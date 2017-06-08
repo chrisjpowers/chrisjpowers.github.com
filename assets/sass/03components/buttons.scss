@@ -1,0 +1,35 @@
+/**************************************************
+ BUTTON STYLES
+**************************************************/
+
+%button {
+  @include button($button-bg);
+  @include border-radius;
+  @include font-size(24);
+  display: block;
+  padding: .5em;
+  color: $button-text;
+  font-family: $button-font;
+  font-weight: 300;
+  text-align: center;
+  &:hover,&:focus {
+    color: $button-text;
+  }
+}
+
+%red-button {
+  @include button($red);
+}
+
+%dark-button {
+  @include button($dk-gray);
+}
+
+%light-button {
+  @include button($lt-blue);
+  color: $teal;
+}
+
+.button {
+  @extend %button;
+}

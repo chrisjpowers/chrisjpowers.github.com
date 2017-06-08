@@ -1,0 +1,105 @@
+.jcarousel-clip-horizontal {
+  width: 700px;
+}
+
+.box {
+  float: left;
+  width: 198px;
+  margin-right: 20px;
+  padding: 10px;
+  background: #f1f2f2;
+  border: 1px solid #ccc;
+}
+
+  .box h1 {
+    color: #07a;
+    font-size: 14px;
+    margin: 0 0 5px 0;
+  }
+
+  .box img {
+    display: block;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    line-height: 0;
+  }
+
+  .box footer h2, .box footer h3 {
+    margin: 5px 0;
+    font-size: 14px;
+  }
+
+  .box footer ul {
+    list-style: none;
+    margin: 5px 0 10px 0;
+    padding: 0;
+  }
+
+  .box footer li {
+    list-style: none;
+    margin: 3px 0;
+    padding: 0;
+  }
+
+  .links .offline {
+    color: #999;
+    font-style: italic;
+  }
+
+.jcarousel-next {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  right: 0px;
+  background: url("/images/arrow_next.png") top left no-repeat;
+  cursor: pointer;
+}
+
+#presentations {
+
+}
+
+  #presentations .jcarousel-next {
+    top: 250px;
+  }
+
+  #presentations .box {
+    height: 510px;
+  }
+
+    #presentations .box .description {
+      height: 180px;
+    }
+
+#recent_work .jcarousel-next {
+  top: 150px;
+}
+
+#recent_work .box {
+  height: 300px;
+}
+
+  #recent_work .box header a {
+    text-decoration: none;
+  }
+
+    #recent_work .box header a:hover h1 {
+      color: #f3a;
+    }
+
+  #recent_work .box .description {
+    height: 120px;
+  }
+
+#about_me .box {
+  height: 180px;
+}
+
+#about_me_box {
+  width: 438px;
+}
+
+  #about_me_box .copy {
+    margin: 0;
+  }
+

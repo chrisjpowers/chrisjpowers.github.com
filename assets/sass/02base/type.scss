@@ -1,0 +1,87 @@
+/**************************************************
+ DEFAULT LINK STYLES
+**************************************************/
+
+a {
+  @extend %transition;
+  text-decoration: none;
+  color: $link-color;
+  &:hover, 
+  &:focus {
+    color: $link-hover;
+  }
+}
+
+/**************************************************
+ DEFAULT TYPE STYLES
+**************************************************/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 1em 0;
+  color: $headline-color;
+  font-family: $headline-font;
+  font-weight: 300;
+  margin: 1em 0;
+}
+
+h1 {@include font-size(30)}
+h2 {@include font-size(24)}
+h3 {@include font-size(21)}
+h4 {@include font-size(18)}
+h5,h6 {@include font-size(16)}
+
+%base-type {
+  @include font-size(14);
+  line-height: 1.8;
+}
+
+p {
+  @extend %base-type;
+  margin: 1em 0;
+}
+
+ol { list-style-type: decimal; }
+ul { list-style-type: square; }
+
+ul,
+ol {
+  margin: 1em 0 1em 1.75em;
+  li {
+    @extend %base-type;
+    margin-bottom: 0.25em;
+  }
+}
+
+blockquote {
+  @include font-size(18);
+  margin: 2em 0;
+  padding: 1.5em 1.5em;
+  border: 3px solid $blockquote-border;
+  border-left: none;
+  border-right: none;
+  color: $blockquote-text;
+  font-family: $blockquote-font;
+  font-weight: 300;
+  text-align: center;
+  @include break-up($large){
+    @include font-size(21);
+    float: right;
+    width: 50%;
+    margin: .5em 0 1em 1.5em;
+  }
+  p {
+    font-size: 1em;
+    margin: 0;
+  }
+}
+
+address {
+  @extend %base-type;
+}
+
+small {
+  @include font-size(11);
+  display: block;
+  margin: 1em 0;
+  line-height: 1.4;
+}

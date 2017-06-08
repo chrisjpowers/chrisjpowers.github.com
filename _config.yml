@@ -1,0 +1,43 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: Chris Powers
+email: chrisjpowers@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  Chris Powers has been developing Web applications for the last eleven years,
+  and he loves sharing his passion for building both software and teams with the
+  audiences nationwide. As a Clean Coders author, Chris is currently producing an
+  educational video series entitled "Clean Code in the Browser". Chris is an
+  engineering manager at Sprout Social and lives in the northern Chicago suburbs
+  with his wife and two children. In his free time he enjoys drumming, tabletop
+  gaming and homebrewing.
+baseurl: "/" # the subpath of your site, e.g. /blog
+url: "http://chrisjpowers.com" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: chrisjpowers
+github_username:  chrisjpowers
+
+excerpt_separator: <!-- more -->
+permalink: blog/:slug
+paginate: 5
+
+# Build settings
+markdown: kramdown
+theme: minima
+gems:
+  - jekyll-feed
+  - jekyll-paginate
+exclude:
+  - Gemfile
+  - Gemfile.lock

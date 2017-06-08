@@ -1,0 +1,40 @@
+/**************************************************
+ BREAKPOINTS
+**************************************************/
+
+$x-small:  360;
+$small:    540;
+$medium:   720;
+$large:    900;
+$x-large:  1080;
+$xx-large: 1260;
+
+@mixin break-up($point) {
+  @media screen and (min-width: pem($point)) { @content; }
+}
+
+@mixin break-down($point) {
+  @media screen and (max-width: pem($point - 1)) { @content; }
+}
+
+/**************************************************
+ FONT SIZE
+**************************************************/
+
+@mixin font-size($pixels) {
+  font-size: #{$pixels}px;
+  font-size: #{$pixels/$base-size}rem;
+}
+
+/**************************************************
+ BUTTON
+**************************************************/
+
+@mixin button($bg-color) {
+  background-color: $bg-color;
+  border: 1px solid darken($bg-color,5%);
+  &:hover,&:focus {
+    background-color: darken($bg-color,10%);
+    border-color: darken($bg-color, 15%);
+  }
+}

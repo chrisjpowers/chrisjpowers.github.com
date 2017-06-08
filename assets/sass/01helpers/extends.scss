@@ -1,0 +1,54 @@
+/**************************************************
+ SHAREABLE STYLES
+**************************************************/
+
+%transition {
+  @include transition;
+}
+
+%clearfix {
+  zoom: 1;
+  &:before,
+  &:after {
+    display:table;
+    visibility:hidden;
+    content:"";
+  }
+  &:after {
+    clear:both;
+  }
+}
+
+%arrow {
+  &:after {
+    @include font-size(12);
+    content: '';
+    display: block;
+    float: right;
+    height: 0;
+    width: 0;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-left: 9px solid $arrow-color; 
+    margin-top: .25em;
+    margin-right: -1.875em;
+    color: $arrow-color;
+  }
+}
+
+%left-arrow {
+  &:before {
+    @include font-size(12);
+    content: '';
+    display: block;
+    float: left;
+    height: 0;
+    width: 0;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-right: 9px solid $arrow-color; 
+    margin-top: .625em;
+    margin-left: -1.875em;
+    color: $arrow-color;
+  }
+}

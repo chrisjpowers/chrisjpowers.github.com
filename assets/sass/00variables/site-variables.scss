@@ -1,0 +1,158 @@
+/**************************************************
+ FONT STACKS
+**************************************************/
+
+$sans-serif: "Helvetica Neue", Helmet, Freesans, sans-serif;
+$serif: Georgia, Times, "Times New Roman", serif;
+$monospace: "courier new", monospace, serif;
+
+$lato: 'Lato', $sans-serif;
+$roboto: 'Roboto Slab', $monospace;
+$merriweather: 'Merriweather', $serif;
+
+/**************************************************
+ FONT USAGE
+**************************************************/
+
+$body-font: $merriweather;
+$headline-font: $lato;
+$button-font: $roboto;
+$code-font: $monospace;
+
+$nav-font: $roboto;
+$blockquote-font: $roboto;
+$footer-font: $roboto;
+
+/**************************************************
+ COLOR PALETTE
+**************************************************/
+
+$red: #f15749;
+$teal: #73b3bf;
+$lt-blue: #f2fafa;
+$lt-gray: #faf7f5;
+$md-gray: #807773;
+$dk-gray: #4d4745;
+$black: #333;
+$white: #fff;
+
+/**************************************************
+ COLOR USAGE
+**************************************************/
+
+// Base Colors
+
+$selection-bg: $red;
+$selection-text: $white;
+
+$body-bg: $white;
+$body-text: $black;
+
+$border-color: darken($lt-blue, 10%);
+
+// Link Colors
+
+$link-color: $red;
+$link-hover: lighten($red,15%);
+
+$button-text: $white;
+$button-bg: $teal;
+
+$headline-color: $md-gray;
+
+$blockquote-text: $teal;
+$blockquote-bg: $lt-blue;
+$blockquote-border: $teal;
+
+$arrow-color: $red;
+
+// Header Colors
+
+$header-bg: $white;
+$header-logo-text: $dk-gray;
+$header-logo-text-hover: $red;
+$header-logo-icon: $red;
+$header-logo-icon-hover: $white;
+$header-logo-icon-fill: $white;
+$header-logo-bg: $teal;
+$header-logo-bg-hover: $red;
+
+$nav-link-bg: $lt-blue;
+$nav-link-hover-bg: $teal;
+$nav-link-color: $md-gray;
+$nav-link-hover-color: $white;
+
+$nav-toggle-bg: $red;
+$nav-toggle-hover: darken($red,5%);
+$nav-toggle-icon: $white;
+
+// Footer Colors
+
+$footer-bg: $black;
+$footer-border: $dk-gray;
+$footer-text: $white;
+$footer-icon-bg: $white;
+$footer-icon-color: $red;
+$footer-icon-hover-color: $teal;
+
+// Module Colors
+
+$module-bg: $white;
+$module-heading-text: $dk-gray;
+$module-heading-hover-text: $red;
+
+// About Section Colors
+
+$about-bg: $teal;
+$about-text: $white;
+$about-link-color: darken($lt-blue, 10%);
+$about-link-hover-color: $white;
+$about-aside-bg: $white;
+$about-aside-text: $black;
+$about-photo-border: $white;
+$about-aside-headline: $red;
+$about-aside-button-bg: darken($teal, 30%);
+$about-aside-button-border: darken($teal, 35%);
+
+// Homepage Colors
+
+$talks-featured-cap-bg: $teal;
+$talks-featured-cap-text: $white;
+$talks-top-bg: $lt-blue;
+$talks-aside-headline: $red;
+$talks-list-bg: darken($lt-blue,5%);
+
+$home-blog-bg: $dk-gray;
+$home-blog-heading: $lt-gray;
+
+$home-opensource-bg: $red;
+$home-opensource-heading: $white;
+
+$home-project-bg: darken($lt-gray,5%);
+$home-project-hover-bg: lighten($red,30%);
+
+// Main Section Colors
+
+$main-bg: $lt-gray;
+$main-module-border: darken($lt-gray,5%);
+$mobile-pagination-bg: lighten($teal,25%);
+$sidebar-headline-color: $teal;
+$entry-date-text: $md-gray;
+
+/**************************************************
+ UNICODE CHARACTERS
+**************************************************/
+
+$vertical-bar: "\007C";
+$bullet: "\2022";
+$triangle-down: "\25BC";
+$triangle-up: "\25B2";
+
+/**************************************************
+ SITE SPECIFIC
+**************************************************/
+
+$base-size: 10;
+$small-fixed-top: 5em;
+$fixed-top: 7em;
+$side-padding: 5%;

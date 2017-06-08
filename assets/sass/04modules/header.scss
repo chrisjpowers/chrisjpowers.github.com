@@ -1,0 +1,126 @@
+/**************************************************
+ HEADER STYLES
+**************************************************/
+
+.site-header {
+  @include box-shadow(0 0 20px transparentize($black, .5));
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  overflow: hidden;
+  padding: .5em;
+  background-color: $header-bg;
+  h1 {
+    @include font-size(10);
+    float: left;
+    margin: 0;
+    a {
+      display: block;
+      overflow: hidden;
+      &:hover,
+      &:focus {
+        .logo-type {color:$header-logo-text-hover}
+        .logo-mark {background-color:$header-logo-bg-hover}
+        svg {color:$header-logo-icon-hover}
+      }
+    }
+    .logo-mark {
+      @extend %transition;
+      @include border-radius(3px);
+      display: block;
+      float: left;
+      height: 4.5em;
+      width: 4.5em;
+      margin-right: 1.5em;
+      background-color: $header-logo-bg;
+      svg {
+        display: block;
+        width: 3.5em;
+        margin: .625em auto 0;
+        fill: $header-logo-icon-fill;
+        color: $header-logo-icon;
+      }
+    }
+    .logo-type {
+      @include font-size(21);
+      display: block;
+      float: left;
+      padding-top: .5em;
+      color: $header-logo-text;
+      text-align: center;
+      text-transform: uppercase;
+    }
+    @include break-up($small){
+      .logo-type {@include font-size(30)}
+      .logo-mark {
+        height: 6em;
+        width: 6em;
+        svg {
+          margin-top: .625em;
+          width: 5em;
+        }
+      }
+    }
+  }
+  nav {
+    display: none;
+    .no-js & {display:block}
+    @include break-up($medium){
+      display: block !important;
+      float: right;
+    }
+    a {
+      @include border-radius(3px);
+      @include font-size(16);
+      display: block;
+      margin-bottom: #{(5/16)}em;
+      padding: .75em 1em;
+      background-color: $nav-link-bg;
+      color: $nav-link-color;
+      font-family: $nav-font;
+      font-weight: 300;
+      text-align: center;
+      @include break-up($medium){
+        float: left;
+        height: #{(60/16)}em;
+        margin: 0 0 0 5px;
+        padding: 1.375em .875em 0;
+        &:hover,&:focus {
+          background-color: $nav-link-hover-bg;
+          color: $nav-link-hover-color;
+        }
+      }
+      @include break-up($large){
+        @include font-size(18);
+        height: #{(60/18)}em;
+        padding: 1.1875em 1em 0;
+      }
+    }
+  }
+}
+
+.nav-toggle {
+  @extend %transition;
+  @include border-radius(3px);
+  float: right;
+  height: 4.5em;
+  width: 4.5em;
+  background-color: $nav-toggle-bg;
+  svg {
+    display: block;
+    width: 3em;
+    margin: 1em auto 0;
+    fill: $nav-toggle-icon;
+  }
+  @include break-up($small){
+    height: 6em;
+    width: 6em;
+    svg {
+      width: 4em;
+      margin-top: 1.375em;
+    }
+  }
+  @include break-up($medium){display:none}
+}

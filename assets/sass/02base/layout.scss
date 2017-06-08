@@ -1,0 +1,29 @@
+/**************************************************
+ LAYOUT STYLES
+**************************************************/
+
+%site-column {
+  max-width: 1260px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+%major-column {
+  @include break-up($medium){
+    float: left;
+    width: 65%;
+  }
+  @include break-up($x-large){
+    width: 59.25%;
+  }
+}
+
+%minor-column {
+  @include break-up($medium){
+    float: right;
+    width: 30%;
+  }
+  @include break-up($x-large){
+    width: 38.875%;
+  }
+}

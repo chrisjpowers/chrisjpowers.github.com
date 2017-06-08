@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rotating Web Pages Receiver</title>
+    <script src="//www.gstatic.com/cast/sdk/libs/receiver/2.0.0/cast_receiver.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/zepto/1.0rc1/zepto.min.js"></script>
+    <script src="/js/cast-away.js"></script>
+    <style type="text/css">
+      body {
+         margin: 0;
+         overflow: hidden;
+      }
+
+      #content {
+          position:absolute;
+          left: 0px;
+          width: 100%;
+          top: 0px;
+          height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      var counter = 0,
+          urls = [];
+
+      function nextUrl() {
+        console.log("urls", urls);
+        if (urls.length == 0) return;
+        var url = urls[counter];
+        console.log("Displaying", url);
+        $("#content").attr("src", url);
+        counter++;
+        if (counter >= urls.length) counter = 0;
+      }
+
+      setInterval(nextUrl, 10000);
+
+      window.onload = function() {
+        var castAway = new CastAway(),
+            receiver = castAway.receive();
+
+        receiver.on("update", function(data) {
+          console.log("data", data);
+          counter = 0;
+          urls = data.urls;
+          nextUrl();
+        });
+      }
+    </script>
+    <iframe id="content"></iframe>
+  </body>
+</html>
+

@@ -1,0 +1,40 @@
+/**************************************************
+ SELECTION STYLES
+**************************************************/
+
+::selection { background: $selection-bg; text-shadow: none; color: $selection-text; }
+::-moz-selection { background: $selection-bg; text-shadow: none; color: $selection-text; }
+img::selection { background: transparent; }
+img::-moz-selection { background: transparent; }
+
+@media only screen and (max-device-width: 480px) {
+  html {-webkit-text-size-adjust: none}
+  a:link {-webkit-tap-highlight-color: $selection-bg;}
+}
+
+/**************************************************
+ BASE STYLES
+**************************************************/
+
+html {
+  font-size: percentage($base-size/16);
+}
+
+body {
+  @extend %footer-bg;
+  color: $body-text;
+  font-family: $body-font;
+}
+
+section {
+  padding: 4.5em $side-padding;
+  @include break-up($medium){
+    padding: 6em $side-padding;
+  }
+}
+
+.inner {@extend %site-column}
+
+svg {@extend %transition}
+
+img {max-width: 100%}
