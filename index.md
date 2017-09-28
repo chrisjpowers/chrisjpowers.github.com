@@ -12,23 +12,35 @@ body_id: home
       <a class="book-me button" href="mailto:chrisjpowers@gmail.com">Book Me</a>
     </aside>
     <div class="video-box">
-      <h6>Featured Talk</h6>
-      <a href="https://cleancoders.com/episode/clean-code-in-the-browser-episode-2-p1/show" target="_blank">
-        <img src="/images/episode-2-part-1.jpg" />
+      <h6>Featured Video</h6>
+      <a href="https://cleancoders.com/episode/clean-code-in-the-browser-episode-3-p3/show" target="_blank">
+        <img src="/images/featured/open-closed-principle-featured.jpg" />
       </a>
       <h4>
-        <a href="https://cleancoders.com/episode/clean-code-in-the-browser-episode-2-p1/show" target="_blank">
-          Single Responsibility Principle (Part 1)
+        <a href="https://cleancoders.com/episode/clean-code-in-the-browser-episode-3-p3/show" target="_blank">
+          Clean Code in the Browser: The Open Closed Principle
         </a>
       </h4>
     </div>
   </div>
 </section>
 
-<section id="talks" class="talks-list">
+<section id="open-source" class="talks-list">
   <div class="inner">
-    <h4 class="heading">More Talks</h4>
+    <h3 class="heading">Clean Coders Videos</h3>
     <ul>
+      <li>
+        <a href="https://cleancoders.com/episode/clean-code-in-the-browser-episode-1/show" target="_blank">
+          <img src="/images/talk-thumbs/episode-1.jpg">
+          <h4>Clean Code in the Browser</h4>
+        </a>
+      </li>
+      <li>
+        <a href="https://cleancoders.com/episode/clean-code-in-the-browser-episode-2-p1/show" target="_blank">
+          <img src="/images/talk-thumbs/episode-2-part-1.jpg">
+          <h4>Single Responsibility Principle (Part 1)</h4>
+        </a>
+      </li>
       <li>
         <a href="https://cleancoders.com/episode/clean-code-in-the-browser-episode-2-p2/show" target="_blank">
           <img src="/images/talk-thumbs/episode-2-part-2.jpg">
@@ -36,15 +48,23 @@ body_id: home
         </a>
       </li>
       <li>
+        <a href="https://cleancoders.com/episode/clean-code-in-the-browser-episode-3-p3/show" target="_blank">
+          <img src="/images/talk-thumbs/open-closed-principle.jpg">
+          <h4>Open Closed Principle</h4>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section id="talks" class="blog talks-list">
+  <div class="inner">
+    <h3 class="heading">More Talks</h3>
+    <ul>
+      <li>
         <a href="/blog/lies-damned-lies-statistics">
           <img src="/images/talk-thumbs/lies-damned-lies-statistics.jpg">
           <h4>Lies, Damned Lies, and Statistics</h4>
-        </a>
-      </li>
-      <li>
-        <a href="https://cleancoders.com/episode/clean-code-in-the-browser-episode-1/show" target="_blank">
-          <img src="/images/talk-thumbs/clean-code-band.jpg">
-          <h4>Clean Code in the Browser</h4>
         </a>
       </li>
       <li>
@@ -123,27 +143,6 @@ body_id: home
   </div>
 </section>
 
-<section id="blog" class="blog">
-  <div class="inner">
-    <h3 class="heading">Recent Blog Posts</h3>
-      {% for post in site.categories["article"] limit:2 %}
-      <article class="{% if forloop.index == 1 %}first{% else %}second{% endif %}">
-        <header>
-          <p class="entry-date">{% include post/date.html %}{{ time }}</p>
-          <h2>
-            <a rel="full-article" href="{{ root_url }}{{ post.url }}">{{ post.title }} {{ index }}</a>
-          </h2>
-        </header>
-        {{ post.excerpt }}
-        {% if post.excerpt != post.content %}
-          <a rel="full-article" href="{{ root_url }}{{ post.url }}" class="more">Read More</a>
-        {% endif %}
-      </article>
-      {% endfor %}
-    <a class="button" href="/blog/categories/article">See All Posts</a>
-  </div>
-</section>
-
 <section id="open-source" class="open-source">
   <div class="inner">
     <h3 class="heading">Open Source</h3>
@@ -175,3 +174,24 @@ body_id: home
     </aside>
   </div>
 </section>
+
+<!-- <section id="blog" class="blog">
+  <div class="inner">
+    <h3 class="heading">Recent Blog Posts</h3>
+      {% for post in site.categories["article"] limit:2 %}
+      <article class="{% if forloop.index == 1 %}first{% else %}second{% endif %}">
+        <header>
+          <p class="entry-date">{% include post/date.html %}{{ time }}</p>
+          <h2>
+            <a rel="full-article" href="{{ root_url }}{{ post.url }}">{{ post.title }} {{ index }}</a>
+          </h2>
+        </header>
+        {{ post.excerpt }}
+        {% if post.excerpt != post.content %}
+          <a rel="full-article" href="{{ root_url }}{{ post.url }}" class="more">Read More</a>
+        {% endif %}
+      </article>
+      {% endfor %}
+    <a class="button" href="/blog/categories/article">See All Posts</a>
+  </div>
+</section> -->
