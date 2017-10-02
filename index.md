@@ -62,6 +62,12 @@ body_id: home
     <h3 class="heading">More Talks</h3>
     <ul>
       <li>
+        <a href="/blog/tdd-like-you-mean-it">
+          <img src="/images/talk-thumbs/tdd-like-you-mean-it.jpg">
+          <h4>TDD Like You Mean It</h4>
+        </a>
+      </li>
+      <li>
         <a href="/blog/lies-damned-lies-statistics">
           <img src="/images/talk-thumbs/lies-damned-lies-statistics.jpg">
           <h4>Lies, Damned Lies, and Statistics</h4>
