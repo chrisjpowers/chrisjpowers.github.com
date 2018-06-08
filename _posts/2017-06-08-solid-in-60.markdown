@@ -1,0 +1,28 @@
+---
+layout: post
+title: "The SOLID Principles in 60 Minutes"
+date: 2018-06-08 00:00
+comments: false
+categories: talk
+youtubeId:
+speakerDeckId:
+speakerDeckRatio:
+---
+
+You’ve heard about the SOLID principles before, but what are they really? Are they just academic ideals, or can they have real impact on your day-to-day code design?
+
+<!-- more -->
+
+This talk is a primer for any developer who wants to improve the quality and structure of their code. We will walk through each of the five SOLID principles, identify their meaning and value, and walk through concrete examples to see the benefits they can bring to your code and your team.
+
+You will leave this talk being familiar with the principles, knowing the tell-tale signs of them being broken, and ready to fix them. Come join us and level up your code design!
+
+## Resources
+
+* [Code Samples](https://github.com/chrisjpowers/solid-in-60)
+* [Slide Deck](https://docs.google.com/presentation/d/1Nu-Uy-bRxDa4y4xQeWNXNAlF3JgZz-wubl1KzTDfmDc/edit?usp=sharing)
+
+## Presented At
+
+* [8/8/2018 That Conference](https://www.thatconference.com/sessions/session/12346)
+* [6/9/2018 Chicago Code Camp](https://www.chicagocodecamp.com/sessions/detail/1395)
