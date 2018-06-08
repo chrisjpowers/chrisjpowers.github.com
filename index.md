@@ -13,12 +13,12 @@ body_id: home
     </aside>
     <div class="video-box">
       <h6>Featured Video</h6>
-      <a href="https://cleancoders.com/episode/clean-code-in-the-browser-episode-3-p3/show" target="_blank">
-        <img src="/images/featured/open-closed-principle-featured.jpg" />
+      <a href="https://cleancoders.com/episode/clean-code-in-the-browser-episode-4/show" target="_blank">
+        <img src="/images/featured/liskov-substitution-featured.jpg" />
       </a>
       <h4>
-        <a href="https://cleancoders.com/episode/clean-code-in-the-browser-episode-3-p3/show" target="_blank">
-          Clean Code in the Browser: The Open Closed Principle
+        <a href="https://cleancoders.com/episode/clean-code-in-the-browser-episode-4/show" target="_blank">
+          Clean Code in the Browser: The Liskov Substitution Principle
         </a>
       </h4>
     </div>
@@ -53,6 +53,12 @@ body_id: home
           <h4>Open Closed Principle</h4>
         </a>
       </li>
+      <li>
+        <a href="https://cleancoders.com/episode/clean-code-in-the-browser-episode-4/show" target="_blank">
+          <img src="/images/talk-thumbs/liskov-substitution.jpg">
+          <h4>Liskov Substitution Principle</h4>
+        </a>
+      </li>
     </ul>
   </div>
 </section>
@@ -61,6 +67,12 @@ body_id: home
   <div class="inner">
     <h3 class="heading">More Talks</h3>
     <ul>
+      <li>
+        <a href="/blog/solid-in-60">
+          <img src="/images/talk-thumbs/solid-in-60.jpg">
+          <h4>SOLID Principles in 60 Minutes</h4>
+        </a>
+      </li>
       <li>
         <a href="/blog/tdd-like-you-mean-it">
           <img src="/images/talk-thumbs/tdd-like-you-mean-it.jpg">
