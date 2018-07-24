@@ -4,7 +4,7 @@ title: "The SOLID Principles in 60 Minutes"
 date: 2018-06-08 00:00
 comments: false
 categories: talk
-youtubeId:
+youtubeId: O_GcadSMxEg?start=361
 speakerDeckId:
 speakerDeckRatio:
 ---
