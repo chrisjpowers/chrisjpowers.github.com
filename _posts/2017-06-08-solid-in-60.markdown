@@ -25,4 +25,5 @@ You will leave this talk being familiar with the principles, knowing the tell-ta
 ## Presented At
 
 * [8/8/2018 That Conference](https://www.thatconference.com/sessions/session/12346)
+* [7/24/2018 Geekfest](https://www.meetup.com/Geekfest/events/252707045/)
 * [6/9/2018 Chicago Code Camp](https://www.chicagocodecamp.com/sessions/detail/1395)
