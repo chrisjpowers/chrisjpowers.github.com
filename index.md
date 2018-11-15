@@ -13,12 +13,12 @@ body_id: home
     </aside>
     <div class="video-box">
       <h6>Featured Video</h6>
-      <a href="https://cleancoders.com/episode/clean-code-in-the-browser-episode-4/show" target="_blank">
+      <a href="https://cleancoders.com/episode/clean-code-in-the-browser-episode-5/show" target="_blank">
         <img src="/images/featured/liskov-substitution-featured.jpg" />
       </a>
       <h4>
-        <a href="https://cleancoders.com/episode/clean-code-in-the-browser-episode-4/show" target="_blank">
-          Clean Code in the Browser: The Liskov Substitution Principle
+        <a href="https://cleancoders.com/episode/clean-code-in-the-browser-episode-5/show" target="_blank">
+          Clean Code in the Browser: The Interface Segregation Principle
         </a>
       </h4>
     </div>
@@ -59,6 +59,12 @@ body_id: home
           <h4>Liskov Substitution Principle</h4>
         </a>
       </li>
+      <li>
+        <a href="https://cleancoders.com/episode/clean-code-in-the-browser-episode-5/show" target="_blank">
+          <img src="/images/talk-thumbs/interface-segregation-principle.jpg">
+          <h4>Interface Segregation Principle</h4>
+        </a>
+      </li>
     </ul>
   </div>
 </section>
@@ -67,6 +73,18 @@ body_id: home
   <div class="inner">
     <h3 class="heading">More Talks</h3>
     <ul>
+      <li>
+        <a href="/blog/scale-up-by-doubling-down">
+          <img src="/images/talk-thumbs/scale-up-by-doubling-down.jpg">
+          <h4>Scale Up by Doubling Down</h4>
+        </a>
+      </li>
+      <li>
+        <a href="/blog/teams-where-everyone-is-heard">
+          <img src="/images/talk-thumbs/teams-where-everyone-is-heard.jpg">
+          <h4>Building Teams Where Everyone is Heard</h4>
+        </a>
+      </li>
       <li>
         <a href="/blog/solid-in-60">
           <img src="/images/talk-thumbs/solid-in-60.jpg">
