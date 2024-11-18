@@ -6,13 +6,13 @@
         <img src="/assets/img/photo/chris-powers.png" alt="Chris Powers">
       </figure>
       <div class="text">
-        <p>Chris Powers has been leading software development teams for the last fifteen years, and he loves sharing his passion for building teams and software with audiences nationwide. As a Clean Coders author, Chris produced an educational video series entitled "Clean Code in the Browser". Chris is VP of Engineering at <a href="https://www.thinkful.com" target="_blank">Thinkful</a> and lives in the northern Chicago suburbs with his wife and two children. In his free time he enjoys drumming, woodworking, and tabletop gaming.</p>
+        <p>Chris Powers has been leading software engineering organizations for the last {{ site.time | date: '%Y' | minus: 2007 }} years, and he loves speaking about his experiences and learnings with audiences nationwide. As a Clean Coders author, Chris produced the "Clean Code in the Browser" video series applying the SOLID principles to browser-based applications. Chris lives in the northern Chicago suburbs with his wife and two children, and in his free time enjoys drumming, woodworking, and tabletop gaming.</p>
         <h2>Contact Info</h2>
         <p><strong>Email:</strong> <a href="mailto:chrisjpowers@gmail.com">chrisjpowers@gmail.com</a></p>
-        <p><strong>Twitter:</strong> <a href="https://twitter.com/chrisjpowers" target="_blank">@chrisjpowers</a></p>
+        <p style="display: none;"><strong>Twitter:</strong> <a href="https://twitter.com/chrisjpowers" target="_blank">@chrisjpowers</a></p>
       </div>
     </article>
-    <aside>
+    <aside style="display: none;">
       <div class="text">
         <h3>Work With Me</h3>
         <p>Thinkful is literally changing people's lives by providing an educational on-ramp into the industry of software engineering. Our engineering team builds the software that makes that possible. Come join me!</p>
@@ -26,7 +26,7 @@
     <div class="social-links">
       <h6>Connect with me</h6>
       <ul>
-        <li>
+        <li style="display: none;">
           <a href="https://twitter.com/chrisjpowers" target="_blank">
             <svg viewBox="0 0 30 30"><use xlink:href="#twitter-icon"></use></svg>
           </a>
@@ -43,6 +43,6 @@
         </li>
       </ul>
     </div>
-    <p class="copyright">All content &copy; Chris Powers, 2020</p>
+    <p class="copyright">All content &copy; Chris Powers {{ site.time | date: '%Y' }}</p>
   </div>
 </footer>
