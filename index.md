@@ -13,12 +13,12 @@ body_id: home
     </aside>
     <div class="video-box">
       <h6>Featured Video</h6>
-      <a href="https://cleancoders.com/episode/clean-code-in-the-browser-episode-5/show" target="_blank">
-        <img src="/images/featured/liskov-substitution-featured.jpg" />
+      <a href="https://cleancoders.com/episode/clean-code-in-the-browser-episode-6" target="_blank">
+        <img src="/images/featured/dependency-inversion-featured.jpg" />
       </a>
       <h4>
-        <a href="https://cleancoders.com/episode/clean-code-in-the-browser-episode-5/show" target="_blank">
-          Clean Code in the Browser: The Interface Segregation Principle
+        <a href="https://cleancoders.com/episode/clean-code-in-the-browser-episode-6" target="_blank">
+          Clean Code in the Browser: The Dependency Inversion Principle
         </a>
       </h4>
     </div>
@@ -30,39 +30,45 @@ body_id: home
     <h3 class="heading">Clean Coders Videos</h3>
     <ul>
       <li>
-        <a href="https://cleancoders.com/episode/clean-code-in-the-browser-episode-1/show" target="_blank">
+        <a href="https://cleancoders.com/episode/clean-code-in-the-browser-episode-1" target="_blank">
           <img src="/images/talk-thumbs/episode-1.jpg">
           <h4>Clean Code in the Browser</h4>
         </a>
       </li>
       <li>
-        <a href="https://cleancoders.com/episode/clean-code-in-the-browser-episode-2-p1/show" target="_blank">
+        <a href="https://cleancoders.com/episode/clean-code-in-the-browser-episode-2-p1" target="_blank">
           <img src="/images/talk-thumbs/episode-2-part-1.jpg">
           <h4>Single Responsibility Principle (Part 1)</h4>
         </a>
       </li>
       <li>
-        <a href="https://cleancoders.com/episode/clean-code-in-the-browser-episode-2-p2/show" target="_blank">
+        <a href="https://cleancoders.com/episode/clean-code-in-the-browser-episode-2-p2" target="_blank">
           <img src="/images/talk-thumbs/episode-2-part-2.jpg">
           <h4>Single Responsibility Principle (Part 2)</h4>
         </a>
       </li>
       <li>
-        <a href="https://cleancoders.com/episode/clean-code-in-the-browser-episode-3-p3/show" target="_blank">
+        <a href="https://cleancoders.com/episode/clean-code-in-the-browser-episode-3" target="_blank">
           <img src="/images/talk-thumbs/open-closed-principle.jpg">
           <h4>Open Closed Principle</h4>
         </a>
       </li>
       <li>
-        <a href="https://cleancoders.com/episode/clean-code-in-the-browser-episode-4/show" target="_blank">
+        <a href="https://cleancoders.com/episode/clean-code-in-the-browser-episode-4" target="_blank">
           <img src="/images/talk-thumbs/liskov-substitution.jpg">
           <h4>Liskov Substitution Principle</h4>
         </a>
       </li>
       <li>
-        <a href="https://cleancoders.com/episode/clean-code-in-the-browser-episode-5/show" target="_blank">
+        <a href="https://cleancoders.com/episode/clean-code-in-the-browser-episode-5" target="_blank">
           <img src="/images/talk-thumbs/interface-segregation-principle.jpg">
           <h4>Interface Segregation Principle</h4>
+        </a>
+      </li>
+      <li>
+        <a href="https://cleancoders.com/episode/clean-code-in-the-browser-episode-6" target="_blank">
+          <img src="/images/talk-thumbs/dependency-inversion.jpg">
+          <h4>Dependency Inversion Principle</h4>
         </a>
       </li>
     </ul>
