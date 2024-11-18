@@ -4,7 +4,6 @@ title: "TDD Like You Mean It"
 date: 2017-08-08 00:00
 comments: false
 categories: talk
-youtubeId: Gi7x3HYXVyU
 speakerDeckId:
 speakerDeckRatio:
 ---

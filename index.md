@@ -69,9 +69,47 @@ body_id: home
   </div>
 </section>
 
+<section class="open-source talks-list">
+  <div class="inner">
+    <h3 class="heading">Recorded Talks</h3>
+    <ul>
+      <li>
+        <a href="/blog/developer-to-manager">
+          <img src="/images/talk-thumbs/developer-to-manager.jpg">
+          <h4>Developer to Manager</h4>
+        </a>
+      </li>
+      <li>
+        <a href="/blog/silence">
+          <img src="/images/talk-thumbs/silence.jpg">
+          <h4>Silence</h4>
+        </a>
+      </li>
+      <li>
+        <a href="/blog/customer-service-for-developers">
+          <img src="/images/talk-thumbs/customer-service-for-developers.jpg">
+          <h4>Customer Service for Developers</h4>
+        </a>
+      </li>
+      <li>
+        <a href="/blog/whats-wrong-with-being-right">
+          <img src="/images/talk-thumbs/whats-wrong-with-being-right.jpg">
+          <h4>What's Wrong with Being Right?!</h4>
+        </a>
+      </li>
+      <li>
+      <a href="/blog/tracking-all-the-things">
+          <img src="/images/talk-thumbs/tracking-all-the-things.jpg">
+          <h4>Tracking All the Things</h4>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
 <section id="talks" class="blog talks-list">
   <div class="inner">
-    <h3 class="heading">More Talks</h3>
+    <h3 class="heading">Past Talk Topics</h3>
     <ul>
       <li>
         <a href="/blog/scale-up-by-doubling-down">
@@ -122,12 +160,6 @@ body_id: home
         </a>
       </li>
       <li>
-        <a href="/blog/developer-to-manager">
-          <img src="/images/talk-thumbs/developer-to-manager.jpg">
-          <h4>Developer to Manager</h4>
-        </a>
-      </li>
-      <li>
         <a href="/blog/creating-healthy-conflict">
           <img src="/images/talk-thumbs/creating-healthy-conflict.jpg">
           <h4>Create Healthy Conflict</h4>
@@ -140,46 +172,22 @@ body_id: home
         </a>
       </li>
       <li>
-        <a href="/blog/silence">
-          <img src="/images/talk-thumbs/silence.jpg">
-          <h4>Silence</h4>
-        </a>
-      </li>
-      <li>
-        <a href="/blog/customer-service-for-developers">
-          <img src="/images/talk-thumbs/customer-service-for-developers.jpg">
-          <h4>Customer Service for Developers</h4>
-        </a>
-      </li>
-      <li>
-        <a href="/blog/whats-wrong-with-being-right">
-          <img src="/images/talk-thumbs/whats-wrong-with-being-right.jpg">
-          <h4>What's Wrong with Being Right?!</h4>
-        </a>
-      </li>
-      <li>
-      <a href="/blog/making-html-email-fun">
+        <a href="/blog/making-html-email-fun">
           <img src="/images/talk-thumbs/making-html-email-fun.jpg">
           <h4>Making HTML Email Fun</h4>
         </a>
       </li>
       <li>
-      <a href="/blog/look-ma-im-on-tv">
+        <a href="/blog/look-ma-im-on-tv">
           <img src="/images/talk-thumbs/look-ma-im-on-tv.jpg">
           <h4>Look Ma, I'm on TV!</h4>
-        </a>
-      </li>
-      <li>
-      <a href="/blog/tracking-all-the-things">
-          <img src="/images/talk-thumbs/tracking-all-the-things.jpg">
-          <h4>Tracking All the Things</h4>
         </a>
       </li>
     </ul>
   </div>
 </section>
 
-<section id="open-source" class="open-source">
+<!-- <section id="open-source" class="open-source">
   <div class="inner">
     <h3 class="heading">Open Source</h3>
     <ul class="projects">
@@ -209,7 +217,7 @@ body_id: home
       <a href="https://github.com/chrisjpowers" target="_blank" class="button">GitHub</a>
     </aside>
   </div>
-</section>
+</section> -->
 
 <!-- <section id="blog" class="blog">
   <div class="inner">

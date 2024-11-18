@@ -4,7 +4,6 @@ title: "A JavaScript Refactoring Masterclass"
 date: 2017-04-24 00:00
 comments: false
 categories: talk
-youtubeId: J18mLs-SRpI?start=222
 speakerDeckId: 
 speakerDeckRatio: 
 ---

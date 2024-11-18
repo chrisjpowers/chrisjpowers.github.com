@@ -4,7 +4,6 @@ title: "Creating (Healthy) Conflict"
 date: 2015-09-01 18:35
 comments: false
 categories: talk
-youtubeId: w0S2Y0VYvOw?start=2410
 speakerDeckId: 386e095e3d6f4fc7b3f3fd77261b44a9
 speakerDeckRatio: 1.77777777777778
 ---

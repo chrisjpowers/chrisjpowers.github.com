@@ -4,7 +4,6 @@ title: "Lies, Damned Lies, and Statistics"
 date: 2017-04-25 00:00
 comments: false
 categories: talk
-vimeoId: 218954778
 speakerDeckId: 72b24b71698842fea1eea585ea38971f
 speakerDeckRatio: 1.77777777777778
 ---

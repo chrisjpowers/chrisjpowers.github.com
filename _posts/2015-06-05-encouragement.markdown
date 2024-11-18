@@ -4,7 +4,6 @@ title: "Encouragement: Admitting We Are Human"
 date: 2015-06-05 04:26
 comments: false
 categories: talk
-youtubeId: YfQbdwb1glA?start=940
 speakerDeckId: c7c2b2a59bda4a3092a13baa7987f07b
 speakerDeckRatio: 1.77777777777778
 ---

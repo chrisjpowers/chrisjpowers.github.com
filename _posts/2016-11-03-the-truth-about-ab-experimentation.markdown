@@ -4,7 +4,6 @@ title: "The Truth About A/B Experimentation"
 date: 2016-11-04 18:35
 comments: false
 categories: talk
-youtubeId: T2WIY1efTTc?start=503
 speakerDeckId: 693264e696b84cd9b658bac4c575cec5
 speakerDeckRatio: 1.77777777777778
 ---

@@ -4,7 +4,6 @@ title: "Promote Your Project!"
 date: 2016-02-09 08:18
 comments: false
 categories: talk
-youtubeId: veMxhz5McQc?t=2m55s
 ---
 
 Each of us is working on awesome projects every day, but who actually knows about it? Even inside your company, do the people down the hall know the amazing things your team is working on? Do you know about theirs?
